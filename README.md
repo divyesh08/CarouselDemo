@@ -20,4 +20,10 @@ last item, it will show first item again and vice versa.
 - If you want to test that, just remove the Loop property which I have set in this sample.
 
 ### Output:
-![Screen-Recording-2021-01-16-at-2](https://user-images.githubusercontent.com/10617244/104808149-4aa24d80-580a-11eb-872c-5f5e9eab1909.gif)
+<details>
+  <img src="https://user-images.githubusercontent.com/10617244/104808149-4aa24d80-580a-11eb-872c-5f5e9eab1909.gif" width="200" height="400" />
+</details>
+
+
+### Reference: 
+- https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/carouselview/interaction
