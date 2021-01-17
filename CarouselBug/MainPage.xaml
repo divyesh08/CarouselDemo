@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="CarouselBug.MainPage">
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="Orange">
+         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0,60,0,0" Padding="0" HeightRequest="200">
+              <CarouselView x:Name="CvCards" ItemsSource="{Binding Cards}" PeekAreaInsets="20"
+                            IndicatorView="CvIndicatorVw" HorizontalScrollBarVisibility="Never" ItemsUpdatingScrollMode="KeepItemsInView"
+                            Loop="False">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame HasShadow="False" Padding="0" Margin="0" IsClippedToBounds="True" CornerRadius="10"
+                               HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="CvIndicatorVw" Margin="0,20,0,0" IndicatorColor="LightGray"
+			        SelectedIndicatorColor="Black" VerticalOptions="End" IndicatorSize="12"/>
+         </StackLayout>
+
+         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Start" Margin="0,10" Padding="0" HeightRequest="200">
+              <CarouselView x:Name="CvCards2" ItemsSource="{Binding Cards2}" PeekAreaInsets="20" Loop="False"
+                    IndicatorView="CvIndicatorVw2" HorizontalScrollBarVisibility="Never" ItemsUpdatingScrollMode="KeepItemsInView">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="10" SnapPointsAlignment="Center" SnapPointsType="MandatorySingle"/>
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame HasShadow="False" Padding="0" Margin="0" BackgroundColor="BlueViolet"
+                               BorderColor="LightGray" IsClippedToBounds="True" CornerRadius="10" HeightRequest="180"
+                               HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+                                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                   <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="CvIndicatorVw2" Margin="0,20,0,0" IndicatorColor="LightGray"
+			        SelectedIndicatorColor="Black" VerticalOptions="End" IndicatorSize="12"/>
+         </StackLayout>
+    </StackLayout>
+</ContentPage>
