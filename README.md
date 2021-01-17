@@ -21,6 +21,7 @@ last item, it will show first item again and vice versa.
 
 ### Output:
 <details>
+  <summary>Click Me!</summary>
   <img src="https://user-images.githubusercontent.com/10617244/104808149-4aa24d80-580a-11eb-872c-5f5e9eab1909.gif" width="200" height="400" />
 </details>
 
